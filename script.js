@@ -102,7 +102,7 @@ buttonDelete.onclick = function () {
 
     for (let i = 0; i < pairsArray.length; i++) {
         //Перевірка опції під конкретним індексом
-        //І якщо він не вибраний, то зберігається
+        //І якщо вона не вибрана, то зберігається
         if (!list.options[i].selected) {
             newArr.push(pairsArray[i]);
         }
