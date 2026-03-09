@@ -1,0 +1,57 @@
+body {
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: white;
+    width: 80vw;
+    height: 500px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Form~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+form div {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    color: grey;
+}
+
+input {
+    width: 50vw;
+    margin-right: 7vw;
+    text-align: start;
+}
+
+input::placeholder {
+    text-align: start;
+}
+
+#list {
+    resize: none;
+    width: 50vw;
+    height: 35vh;
+    margin-right: 7vw;
+}
+
