@@ -8,7 +8,7 @@ const postID = url.searchParams.get('posts')
 fetch('https://jsonplaceholder.typicode.com/posts/' + postID)
     .then(response => response.json())
     .then(postData => {
-        console.log(postData)
+        // console.log(postData)
         const post = postData
 
         const postBlock = document.createElement('div')
@@ -34,7 +34,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/' + postID)
             .then(response => response.json())
             .then(commentsData => {
                 const comments = commentsData
-                console.log(comments)
+                // console.log(comments)
 
                 for (const comment of comments) {
                     const commentDiv = document.createElement('div')

@@ -9,7 +9,7 @@ const userID = url.searchParams.get('user')
 fetch('https://jsonplaceholder.typicode.com/users/' + userID)
     .then(response => response.json())
     .then(userData => {
-        console.log(userData)
+        // console.log(userData)
         const user = userData
 
         const h4 = document.createElement('h4');
@@ -89,7 +89,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userID)
                     //Вимкнув кнопку щоб уникнути дублювання інформації
                     buttonPosts.disabled = true
 
-                    console.log(userPosts);
+                    // console.log(userPosts);
 
                     for (const userPost of userPosts) {
                         const postDiv = document.createElement('div');
