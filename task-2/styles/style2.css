@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/*Стилізаія блоку з інфою про юзера */
+#container {
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/*Стилізація кнопки*/
+.buttonPost {
+    width: 90%;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стилізація контейнера для постів */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 2%;
+    justify-content: center;
+}
+
+/* Стилізація блока поста */
+.post {
+    width: 18%;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p, h4, h5, a, ul, li {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+a {
+    color: #2563eb;
+}
+
+ul {
+    color: green;
+}
+
+li {
+    list-style: circle;
+}

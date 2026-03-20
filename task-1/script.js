@@ -3,6 +3,7 @@
 const name = document.getElementById('name');
 const add = document.getElementById('add');
 const list = document.getElementById('list');
+const h4 = document.getElementsByTagName('h4')[0];
 
 //2. Створив пустий масив в котрому будуть зберігатись пари (ім'я = значення)
 let pairsArray = []
@@ -12,11 +13,14 @@ add.onclick = function () {
     //3.1 Зробив перевірки на початковий текст
     const rowValue = name.value;
     if (!rowValue) {
-        console.warn("Ви нічого не написали")
+        h4.innerText = ("Ви нічого не написали")
         return;
     } else if (!rowValue.includes('=')) {
-        console.error("Ви повинні написати '=' між ім'ям та значенням")
+        h4.innerText =("Ви повинні написати '=' між ім'ям та значенням")
         return;
+    }
+    else {
+        h4.innerText = ('');
     }
 
     //3.2 Розділив рядок
@@ -29,19 +33,20 @@ add.onclick = function () {
     //3.4 Роблю основну перевірку умов
     const isValid = /^[a-zA-Z0-9 ]+$/; //Регулярний вираз для перевірки тексту
 
-    if (splitValue.length < 2 || splitValue.length > 2) {
-        console.error("Неправильний ввід пари")
+    if (splitValue.length !== 2) {
+        h4.innerText = ("Неправильний ввід пари")
     }
 
     //.test - метод регулярних виразів (regexp), який перевіряє співпадіння між регулярним виразом та вказаним рядком
     else if (!isValid.test(namePart) || !isValid.test(valuePart)) {
-        console.error("Імена та значення можуть містити тільки алфавітно-цифрові символи")
+        h4.innerText =("Імена та значення можуть містити тільки алфавітно-цифрові символи")
     }
     else {
+        h4.innerText =('')
         // console.log(splitValue);
         const obj = {name: namePart, value: valuePart};
         pairsArray.push(obj);
-        console.log(pairsArray);
+        // console.log(pairsArray);
         name.value = ''; //Очистка рядка після натискання на кнопку
         renderList()
     }
@@ -76,7 +81,7 @@ buttonSortByName.onclick = function () {
         }
     })
 
-    console.log(pairsArray)
+    // console.log(pairsArray)
     renderList()
 }
 
@@ -93,7 +98,7 @@ buttonSortByValue.onclick = function () {
         }
     })
 
-    console.log(pairsArray)
+    // console.log(pairsArray)
     renderList()
 }
 
@@ -108,6 +113,6 @@ buttonDelete.onclick = function () {
         }
     }
     pairsArray = newArr;
-    console.log(pairsArray)
+    // console.log(pairsArray)
     renderList()
 }
